@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Birthday calculator</title>
         <link href="css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="styles.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <title>Birthday calculator</title>
     </head>
     <body>
         <div>
             <!--Landing/about page-->
             <section>
-                <div></div>
-                <div>
-                    <h1>About</h1>
-                    <p>This web application takes the users birthday and calculates the day of the week they were born
-                        depending on the gender and outputs their Akan Name
+                <div class="nav-bar">
+                        <div class="logo">
+                            <li><a href="#">Birth Calculator</a></li>
+                        </div>
+                        <div class="navi">
+                            <ul>
+                                <li><a href="#">About This App</a></li>
+                                <li><a href="#">Calculator</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="landing-page">
+                   <h1>About This App</h1>
+                   <p>This is a day of the week <br/> Birth calculator
+                    The web application <br /> takes the users  birthday and calculates <br />the day of the week they were born<br/>
+                    depending  on their gender <br /> and outputs an <strong style="color: rgb(255,166,0)">Akan Name</strong>
                     </p>
                 </div>
             </section>
             <!--calculator section-->
-            <section>
+            <section class="calculator-section">
+                <h1 style="text-align: center">Calculator</h1>
                 <div class="the-calculator">
-                    <div><h1>Calculator</h1></div>
-                    <div class="the-form">
-                        <form>
-                            <div>
-                            Select date of birth : <input type="date"><br>
-                            </div>
-                            <div><p>Input gender</p></div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio1">Male</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Female</label>
-                            </div>
-                            <div class="submit-button">
-                                <input class="btn btn-primary" type="submit" value="Submit">
-                            </div>
-                        </form>
-                    </div>
+                        
                 </div>
             </section>
             <!--the footer-->
             <section>
-                <p>Copyrights fmuchembi 2020</p>
+                <h1 style="text-align: center"><strong>Contacts</strong></h1>
+                <div class="footer">
+                </div>
+                    <p style="text-align: center">Copyrights fmuchembi 2020</p>
             </section>
         </div>
         <script src="scripts.js"></script>
