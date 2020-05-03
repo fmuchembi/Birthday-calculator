@@ -13,40 +13,40 @@ body{
   background-size: cover;
 }
 .nav-bar{
-  padding: 15px 0;
   position: fixed;
   top:0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.561);
-  overflow:auto;
+  box-shadow: rgba(0, 0, 0, 0.5);
 }
-
-.logo a{
+.logo{
+	display:block;
+	float:left;
+}
+.logo li a{
   font-size: 20px;
   color: rgb(255, 166, 0);
   font-weight: bold;
   font-family: fantasy;
-}
-.logo li{
-  position: absolute;
-  margin-top: 15px;
-  margin-left: 20px;
   list-style: none;
+  
+}
+.navi ul li {
+  display: inline-block;
+  
 }
 .navi li{
-	float: inline-end;
+	display:inline-block;
+  list-style:none;
+  margin: 15px;
 }
-.navi ul{padding: 0;
-  margin:0 0 0 0 150px;
-  list-style: none;
-
+.navi ul{list-style-type: none;
+  text-align: end;
+  font: 1em sans-serif;
+  font-size: 15px;
 }
-.navi a{
+.navi li a{
   color: white;
-  width: 100px;
-  display: block;
-  padding: 20px,15px;
-  text-align: center
 }
 .navi li a:hover{
   color: rgb(255, 166, 0);
