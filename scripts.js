@@ -1,10 +1,12 @@
 const gender = document.getElementsByClassName('gender')
-const birthDay = document.getElementsByClassName('birth_day')
-const birthMonth = document.getElementsByClassName('birth_month')
-const birthYear = document.getElementsByClassName('birth_year')
-const birthCentury = birth_year[]
-const year = birth_year[]
+const birthDay = document.getElementsByClassName('birthDay')
+const birthMonth = document.getElementsByClassName('birthMonth')
+const birthYear = document.getElementsByClassName('birthYear')
+const birthCentury = birth_year[];
+const year = birth_year[];
 const day = dayOfWeek(birthCentury, birthYear, birthMonth, birthDay);
+day.toFixed();
+
 
 function validateBirthdate(birthDay) {
     if (birthDay < 1 || birthDay > 31) {
@@ -30,12 +32,12 @@ function validateBirthmonth(birthMonth) {
 function dayOfWeek(birthCentury,birthYear,birthMonth, birthDay){
 
     return (((birthCentury/4)-2*birthCentury-1) + ((5*birthYear/4)) +((26*(birthMonth+1)/10))+birthDay) % 7;
-};
+}
 
 //alert(day);
 
-function gender_akan(gender,day) {
-    const day = result()//Check on how to call functions with arguments inside another function
+function gender_akan(day) {
+    //const day = result() Check on how to call functions with arguments inside another function
     if (gender === 'male') {
         if (day=== 0)
             return 'Kwasi';
@@ -69,4 +71,8 @@ function gender_akan(gender,day) {
             return 'Ama';
 
     }
+
+    document.getElementsByClassName("akan-name").innerHTML = <strong>gender_akan</strong> +"is your Akan name"
+
+    //console.log(gender_akan+"is your Akan name ")
 }
