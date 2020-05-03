@@ -18,39 +18,40 @@ body{
   top:0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.561);
-  box-shadow: rgba(0, 0, 0, 0.5);
+  overflow:auto;
 }
-.logo{
-	display:block;
-	float:left;
-}
-.logo li a{
+
+.logo a{
   font-size: 20px;
   color: rgb(255, 166, 0);
   font-weight: bold;
   font-family: fantasy;
-  list-style: none;
-  
 }
-.navi ul li {
-  display: inline-block;
-  margin-inline: 25px;
-  
+.logo li{
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 20px;
+  list-style: none;
 }
 .navi li{
-	display:inline-block;
-  list-style:none;
+	float: inline-end;
 }
-.navi ul{list-style-type: none;
-  text-align: end;
-  font: 1em sans-serif;
-  font-size: 15px;
+.navi ul{padding: 0;
+  margin:0 0 0 0 150px;
+  list-style: none;
+
 }
-.navi li a{
+.navi a{
   color: white;
+  width: 100px;
+  display: block;
+  padding: 20px,15px;
+  text-align: center
 }
 .navi li a:hover{
   color: rgb(255, 166, 0);
+  transition: 0.5s;
+  text-transform: uppercase;
 }
 .landing-page{background: url("images/calcbg.jfif") rgba(0, 0, 0, 0.5);
   background-size: cover;
@@ -179,32 +180,32 @@ select {
 }
 
 .bottom{
-  text-align: center;
-  margin-inline:430px;
+  width: 100%;
+  background:black;
 }
-.bottom p{ 
-  display:inline;
+.bottom p{
+  display: inline;
   float: right;
+  padding: 10px;
 }
 .bottom a{
   display:inline;
   float: right;
-
 }
 .foot-list{
   transform: translate(-50% -50%);
 }
 .foot-list a{
   background: rgb(255, 166, 0);
-  margin-inline: 15px;
   color:black;
-  text-align: center;
   border-radius: 50%;
   text-align: center;
   font-size: 24px;
   transition:0.4s;
   height: 30px;
   width: 30px;
+  border: 10px;
+  margin: 10px;
 
 }
 .foot-list a:hover{
@@ -217,3 +218,5 @@ select {
   );
 }
 
+
+  
