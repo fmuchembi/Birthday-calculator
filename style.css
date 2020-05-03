@@ -29,6 +29,8 @@ body{
   color: rgb(255, 166, 0);
   font-weight: bold;
   font-family: fantasy;
+  list-style: none;
+  
 }
 .navi ul li {
   display: inline-block;
