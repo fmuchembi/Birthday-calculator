@@ -23,12 +23,14 @@ body{
 	display:block;
 	float:left;
 }
+.logo li{
+  list-style: none;
+}
 .logo li a{
   font-size: 20px;
   color: rgb(255, 166, 0);
   font-weight: bold;
   font-family: fantasy;
-  list-style: none;
   
 }
 .navi ul li {
