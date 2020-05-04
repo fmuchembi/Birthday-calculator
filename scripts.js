@@ -1,26 +1,33 @@
-const gender = document.getElementsByClassName('gender')
-const birthDay = document.getElementsByClassName('birthDay')
-const birthMonth = document.getElementsByClassName('birthMonth')
-const birthYear = document.getElementsByClassName('birthYear')
-const birthCentury = birth_year[];
-const year = birth_year[];
-const day = dayOfWeek(birthCentury, birthYear, birthMonth, birthDay);
+function theAkanName(){
+const gender = document.getElementById("gender").value;
+const birthDay = document.getElementById("day").value;
+const birthMonth = document.getElementById("month").value;
+const birthYear = document.getElementById("year-of-birth").value;
+
+const yearOfBirth = birthYear.toString();
+const year = yearOfBirth.slice(2,4);
+const birthCentury =yearOfBirth.slice (0,2);
+const day = dayOfWeek(birthCentury, year, birthMonth, birthDay);
 day.toFixed();
 
+// date of birth validation
 
 function validateBirthdate(birthDay) {
     if (birthDay < 1 || birthDay > 31) {
-        return null;
-    }
+        alert("date invalid");
+
+    }   
     else {
         birthDay = birthDay;
         return birthDay;
     }
 
 }
+// month of birth validation
+
 function validateBirthmonth(birthMonth) {
     if (birthMonth < 1 || birthMonth > 12) {
-        return null;
+        alert("month invalid");
     }
     else {
         birthMonth = birthMonth;
@@ -29,15 +36,31 @@ function validateBirthmonth(birthMonth) {
 
 }
 
-function dayOfWeek(birthCentury,birthYear,birthMonth, birthDay){
+//year of birth validation
+
+function validateBirthYear(birthYear){
+    if (birthYear < 1950 || birthYear >2020){
+        alert("year invalid")
+
+    }
+    else{
+        birthYear=birthYear;
+        return birthYear;
+    }
+}
+}
+
+// function to give us the day of the week
+
+function dayOfWeek(birthCentury,year,birthMonth, birthDay){
 
     return (((birthCentury/4)-2*birthCentury-1) + ((5*birthYear/4)) +((26*(birthMonth+1)/10))+birthDay) % 7;
 }
 
-//alert(day);
 
-function gender_akan(day) {
-    //const day = result() Check on how to call functions with arguments inside another function
+//function to provide us the akan name
+
+function akanName(gender, day) {
     if (gender === 'male') {
         if (day=== 0)
             return 'Kwasi';
@@ -72,7 +95,5 @@ function gender_akan(day) {
 
     }
 
-    document.getElementsByClassName("akan-name").innerHTML = <strong>gender_akan</strong> +"is your Akan name"
-
-    //console.log(gender_akan+"is your Akan name ")
 }
+alert("Your Akan name is" + AkanName(gender, day));
