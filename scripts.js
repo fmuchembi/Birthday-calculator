@@ -1,3 +1,4 @@
+
 function theAkanName(){
 const gender = document.getElementById("gender").value;
 const birthDay = document.getElementById("day").value;
@@ -40,7 +41,7 @@ function validateBirthmonth(birthMonth) {
 
 function validateBirthYear(birthYear){
     if (birthYear < 1950 || birthYear >2020){
-        alert("year invalid")
+        alert("year invalid");
 
     }
     else{
@@ -48,13 +49,15 @@ function validateBirthYear(birthYear){
         return birthYear;
     }
 }
+
+    alert("Your Akan name is" + akanName(gender, day));  
 }
 
-// function to give us the day of the week
 
+// function to give us the day of the week
 function dayOfWeek(birthCentury,year,birthMonth, birthDay){
 
-    return (((birthCentury/4)-2*birthCentury-1) + ((5*birthYear/4)) +((26*(birthMonth+1)/10))+birthDay) % 7;
+    return (((birthCentury/4)-2*birthCentury-1) + ((5*year/4)) +((26*(birthMonth+1)/10))+birthDay) % 7;
 }
 
 
@@ -94,6 +97,6 @@ function akanName(gender, day) {
             return 'Ama';
 
     }
+   
 
 }
-alert("Your Akan name is" + AkanName(gender, day));
