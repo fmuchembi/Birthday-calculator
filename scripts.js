@@ -1,71 +1,34 @@
 
-function theAkanName(){
-const gender = document.getElementById("gender").value;
-const birthDay = document.getElementById("day").value;
-const birthMonth = document.getElementById("month").value;
-const birthYear = document.getElementById("year-of-birth").value;
+function grab_data() {
+    const gender = document.getElementsByName('gender');
+    var year_of_birth = document.getElementById("year-of-birth").value
+    const month_of_birth = document.getElementById("month-of-birth").value
+    const day_of_birth = document.getElementById("day_of_birth").value
 
-const yearOfBirth = birthYear.toString();
-const year = yearOfBirth.slice(2,4);
-const birthCentury =yearOfBirth.slice (0,2);
-const day = dayOfWeek(birthCentury, year, birthMonth, birthDay);
-day.toFixed();
-
-// date of birth validation
-
-function validateBirthdate(birthDay) {
-    if (birthDay < 1 || birthDay > 31) {
-        alert("date invalid");
-
-    }   
-    else {
-        birthDay = birthDay;
-        return birthDay;
+    var foundGenger;
+    for (i = 0; i < gender.length; i++) {
+        if (gender[i].checked) {
+            foundGenger = gender[i].value
+        }
     }
 
-}
-// month of birth validation
+    year_of_birth = year_of_birth.toString()
+    var birthCentury = year_of_birth.slice(0, 2)
+    birthCentury = parseInt(birthCentury)
 
-function validateBirthmonth(birthMonth) {
-    if (birthMonth < 1 || birthMonth > 12) {
-        alert("month invalid");
-    }
-    else {
-        birthMonth = birthMonth;
-        return birthMonth;
-    }
+    const day = dayOfWeek(birthCentury, year_of_birth, month_of_birth, day_of_birth)
+    const name = akanName(foundGenger, Math.round(day))
+    alert("Your Akan name is " + name);
 
 }
 
-//year of birth validation
+let dayOfWeek = function (birthCentury, year, birthMonth, birthDay) {
+    return (((birthCentury / 4) - 2 * birthCentury - 1) + ((5 * year / 4)) + ((26 * (birthMonth + 1) / 10)) + birthDay) % 7;
 
-function validateBirthYear(birthYear){
-    if (birthYear < 1950 || birthYear >2020){
-        alert("year invalid");
-
-    }
-    else{
-        birthYear=birthYear;
-        return birthYear;
-    }
 }
-
-    alert("Your Akan name is" + akanName(gender, day));  
-}
-
-
-// function to give us the day of the week
-function dayOfWeek(birthCentury,year,birthMonth, birthDay){
-
-    return (((birthCentury/4)-2*birthCentury-1) + ((5*year/4)) +((26*(birthMonth+1)/10))+birthDay) % 7;
-}
-
-
-//function to provide us the akan name
-
 function akanName(gender, day) {
     if (gender === 'male') {
-        if (day=== 0)
+        if (day === 0)
             return 'Kwasi';
         else if (day === 1)
             return 'Kwadwo';
@@ -97,6 +60,5 @@ function akanName(gender, day) {
             return 'Ama';
 
     }
-   
 
 }
