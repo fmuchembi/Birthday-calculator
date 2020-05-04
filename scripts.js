@@ -5,6 +5,45 @@ function grab_data() {
     const month_of_birth = document.getElementById("month-of-birth").value
     const day_of_birth = document.getElementById("day_of_birth").value
 
+    // date of birth validation
+
+    function validateBirthdate(birthDay) {
+        if (birthDay < 1 || birthDay > 31) {
+            alert("date invalid");
+
+        }
+        else {
+            birthDay = birthDay;
+            return birthDay;
+        }
+
+    }
+    // month of birth validation
+
+    function validateBirthmonth(birthMonth) {
+        if (birthMonth < 1 || birthMonth > 12) {
+            alert("month invalid");
+        }
+        else {
+            birthMonth = birthMonth;
+            return birthMonth;
+        }
+
+    }
+
+    //year of birth validation
+
+    function validateBirthYear(birthYear) {
+        if (birthYear < 1950 || birthYear > 2020) {
+            alert("year invalid");
+
+        }
+        else {
+            birthYear = birthYear;
+            return birthYear;
+        }
+    }
+
     var foundGenger;
     for (i = 0; i < gender.length; i++) {
         if (gender[i].checked) {
