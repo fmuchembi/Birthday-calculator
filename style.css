@@ -182,32 +182,34 @@ select {
 }
 
 .bottom{
+  text-align: center;
   width: 100%;
   background:black;
 }
-.bottom p{
-  display: inline;
-  float: right;
-  padding: 10px;
-}
 .bottom a{
-  display:inline;
-  float: right;
+display: inline;
 }
-.foot-list{
+.foot-list ul{
   transform: translate(-50% -50%);
 }
 .foot-list a{
   background: rgb(255, 166, 0);
   color:black;
   border-radius: 50%;
-  text-align: center;
   font-size: 24px;
   transition:0.4s;
+  text-align: center;
   height: 30px;
   width: 30px;
   border: 10px;
   margin: 10px;
+
+}
+
+#paragraph{ background: none;
+  color: white;
+  border-radius: none;
+  font-size: 15px;
 
 }
 .foot-list a:hover{
