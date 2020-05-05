@@ -7,40 +7,40 @@ function grab_data() {
 
     // date of birth validation
 
-    function validateBirthdate(birthDay) {
-        if (birthDay < 1 || birthDay > 31) {
+    function validateBirthdate(day_of_birth) {
+        if (day_of_birth < 1 || day_of_birth > 31) {
             alert("date invalid");
 
         }
         else {
-            birthDay = birthDay;
-            return birthDay;
+            day_of_birth = day_of_birth;
+            return day_of_birth;
         }
 
     }
     // month of birth validation
 
-    function validateBirthmonth(birthMonth) {
-        if (birthMonth < 1 || birthMonth > 12) {
+    function validateBirthmonth(month_of_birth) {
+        if (month_of_birth < 1 || month_of_birth > 12) {
             alert("month invalid");
         }
         else {
-            birthMonth = birthMonth;
-            return birthMonth;
+            month_of_birth = month_of_birth;
+            return month_of_birth;
         }
 
     }
 
     //year of birth validation
 
-    function validateBirthYear(birthYear) {
-        if (birthYear < 1950 || birthYear > 2020) {
+    function validateBirthYear(year_of_birth) {
+        if (year_of_birth < 1950 || year_of_birth > 2020) {
             alert("year invalid");
 
         }
         else {
-            birthYear = birthYear;
-            return birthYear;
+            year_of_birth = year_of_birth;
+            return year_of_birth;
         }
     }
 
@@ -53,16 +53,18 @@ function grab_data() {
 
     year_of_birth = year_of_birth.toString()
     var birthCentury = year_of_birth.slice(0, 2)
+    var year = year_of_birth.slice(2, 4);
+    year =parseInt(year)
     birthCentury = parseInt(birthCentury)
 
-    const day = dayOfWeek(birthCentury, year_of_birth, month_of_birth, day_of_birth)
+    const day = dayOfWeek(birthCentury, year, month_of_birth, day_of_birth)
     const name = akanName(foundGenger, Math.round(day))
     alert("Your Akan name is " + name);
 
 }
 
-let dayOfWeek = function (birthCentury, year, birthMonth, birthDay) {
-    return (((birthCentury / 4) - 2 * birthCentury - 1) + ((5 * year / 4)) + ((26 * (birthMonth + 1) / 10)) + birthDay) % 7;
+let dayOfWeek = function (birthCentury, year, month_of_birth, day_of_birth) {
+    return (((birthCentury / 4) - 2 * birthCentury - 1) + ((5 * year / 4)) + ((26 * (month_of_birth + 1) / 10)) + day_of_birth) % 7;
 
 }
 function akanName(gender, day) {
