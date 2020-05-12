@@ -51,14 +51,14 @@ function grab_data() {
         }
     }
 
-    year_of_birth = year_of_birth.toString()
-    var birthCentury = year_of_birth.slice(0, 2)
+    year_of_birth = year_of_birth.toString();
+    var birthCentury = year_of_birth.slice(0, 2);
     var year = year_of_birth.slice(2, 4);
-    year =parseInt(year)
-    birthCentury = parseInt(birthCentury)
+    year =parseInt(year);
+    birthCentury = parseInt(birthCentury);
 
-    const day = dayOfWeek(birthCentury, year, month_of_birth, day_of_birth)
-    const name = akanName(foundGenger, Math.round(day))
+    const day = dayOfWeek(birthCentury, year, month_of_birth, day_of_birth);
+    const name = akanName(foundGenger, Math.round(day));
     alert("Your Akan name is " + name);
 
 }
