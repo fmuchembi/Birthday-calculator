@@ -1,6 +1,6 @@
 
 function grab_data() {
-    const gender = document.getElementsByName('gender');
+    const gender = document.getElementsByName("gender");
     var year_of_birth = document.getElementById("year-of-birth").value
     const month_of_birth = document.getElementById("month-of-birth").value
     const day_of_birth = document.getElementById("day_of_birth").value
@@ -54,7 +54,7 @@ function grab_data() {
     year_of_birth = year_of_birth.toString();
     var birthCentury = year_of_birth.slice(0, 2);
     var year = year_of_birth.slice(2, 4);
-    year =parseInt(year);
+    year = parseInt(year);
     birthCentury = parseInt(birthCentury);
 
     const day = dayOfWeek(birthCentury, year, month_of_birth, day_of_birth);
